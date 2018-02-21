@@ -1,0 +1,21 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "description": "server for Anthill app",
+  "main": "bootstrap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "server",
+    "mongoose",
+    "hapijs"
+  ],
+  "author": "Kat Baudouin Jeremy",
+  "license": "MIT",
+  "dependencies": {
+    "glue": "^5.0.0",
+    "hapi-moongoose-models-plugin": "0.0.3",
+    "hapi-routes-plugin": "0.0.2"
+  }
+}
