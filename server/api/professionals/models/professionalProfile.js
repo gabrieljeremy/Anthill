@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const schema = new Schema({
-  password: {
-    type: String,
+  editors: {
+    type: [account],
     require: true
   },
   creationDate: {
@@ -44,7 +44,7 @@ const schema = new Schema({
   mobilePhone: {
     type: String
   },
-  email: {
+  contactEmail: {
     type: String,
     require: true,
     unique :true
@@ -78,4 +78,4 @@ const schema = new Schema({
   }
 });
 
-module.exports = mongoose.model('professionalUser', schema);
+module.exports = mongoose.model('professionalProfile', schema);

@@ -7,7 +7,7 @@ const schema = new Schema({
     require: true
   },
   requester: {
-    type: privateUser,
+    type: account,
     require: true
   },
   needs: {
