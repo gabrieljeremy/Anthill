@@ -15,6 +15,7 @@ exports.createAccount = async (req,h) => {
        const account = await new Account(req.payload);
        try{
        await account.save()
+           account.password='';
            return account;
        }catch(e){
            console.log(e)
@@ -28,7 +29,10 @@ exports.createAccount = async (req,h) => {
 }
 exports.login = async (req,h) => {
     let account = await Account.findByEmail ( req.payload.email);
-    if (bcrypt.compareSync(req.payload.password, account.password)) return account;
+    if (bcrypt.compareSync(req.payload.password, account.password)){
+        account.password='';
+        return account;
+    } 
     else return Boom.badData('Authentication failed')
      
     
