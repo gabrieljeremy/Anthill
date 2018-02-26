@@ -6,12 +6,20 @@ import {MatButtonModule, MatCheckboxModule, MatIconModule, MatMenuModule} from '
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
+import { PropageComponent } from './propage/propage.component';
+import { LoginComponent } from './login/login.component';
+import { ServiceRequestComponent } from './service-request/service-request.component';
+import { CreatePropageComponent } from './create-propage/create-propage.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
+    PropageComponent,
+    LoginComponent,
+    ServiceRequestComponent,
+    CreatePropageComponent
   ],
   imports: [
     BrowserModule,
