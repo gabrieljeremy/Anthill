@@ -3,6 +3,7 @@ require(`${process.cwd()}/models/account`)
 require(`${process.cwd()}/models/professionalProfile`)
 require(`${process.cwd()}/models/offer`)
 require(`${process.cwd()}/models/request`)
+const AccountController = require ('./controllers/accountsController.js')
 ///////////////////////////////////
 const mongoose = require('mongoose');
 const Hapi = require('hapi');
@@ -18,13 +19,16 @@ const server = Hapi.server({
 });
 
 // Add the route
+////////////   ROUTES FOR ACCOUNTS ///////////////////////////////
 server.route({
-    method: 'GET',
-    path:'/', 
-    handler: async (request, h) =>{        
-
-        return Account.hello();
-    }
+    method: 'POST',
+    path:'/api/accounts/createAccount', 
+    handler: AccountController.createAccount
+});
+server.route({
+    method: 'POST',
+    path:'/api/accounts/login', 
+    handler: AccountController.login    
 });
 
 
@@ -36,9 +40,9 @@ async function start() {
         const mongoose = require('mongoose')
         mongoose.Promise = global.Promise
         mongoose.connect('mongodb://anthill:technocite2018@ds245238.mlab.com:45238/anthill_db',(err) => {
-        if(err) console.log('db connection fail')
-        console.log('mongodb connection success')
-})
+            if(err) console.log('db connection fail')
+            else console.log('mongodb connection success')
+        })
 
     }
     catch (err) {

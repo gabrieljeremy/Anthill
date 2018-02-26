@@ -25,7 +25,7 @@ const schema = new Schema({
     required: true
   },
   address: {
-    address: String,
+    street: String,
     zip: String,
     city:String,
     country:String,
@@ -44,7 +44,7 @@ const schema = new Schema({
   contactEmail: {
     type: String,
     required: true,
-    unique :true
+
   },
   vat: {
     type: String
