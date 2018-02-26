@@ -2,7 +2,7 @@
   "name": "server",
   "version": "0.0.1",
   "description": "server for Anthill app",
-  "main": "bootstrap.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,8 +14,24 @@
   "author": "Kat Baudouin Jeremy",
   "license": "MIT",
   "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^5.0.0",
+    "es6-promisify": "^6.0.0",
+    "express": "^4.16.2",
+    "express-hbs": "^1.0.4",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.0.1",
     "glue": "^5.0.0",
+    "hapi": "^17.2.0",
     "hapi-moongoose-models-plugin": "0.0.3",
-    "hapi-routes-plugin": "0.0.2"
+    "hapi-routes-plugin": "0.0.2",
+    "mongoose": "^5.0.6",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^4.5.0",
+    "routes": "^2.1.0",
+    "session": "^0.1.0",
+    "uuid": "^3.2.1",
+    "validator": "^9.4.1"
   }
 }
