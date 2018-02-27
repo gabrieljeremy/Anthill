@@ -1,3 +1,29 @@
-<p>
-  login works!
-</p>
+<div class="containerPass">
+  <div class="containerLeft">
+    <div class="loginForm">
+      <h2>LOGIN</h2>
+      <mat-form-field>
+        <input matInput placeholder="Enter your email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="password" placeholder="Enter your password" required>
+      </mat-form-field>
+    </div>
+
+  </div>
+  <div class="containerRight">
+    <div class="registerForm">
+      <h2>Register</h2>
+
+      <mat-form-field>
+        <input matInput placeholder="Enter your email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="password" placeholder="Enter your password" required>
+      </mat-form-field>
+    </div>
+  </div>
+
+</div>

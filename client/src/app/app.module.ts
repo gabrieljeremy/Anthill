@@ -1,8 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule, MatIconModule, MatMenuModule} from '@angular/material';
+import { NgModule, HostBinding } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
+
+// Material ANGULAR
+import { MatButtonModule, MatCheckboxModule, MatIconModule, MatMenuModule, MatOptionModule } from '@angular/material';
+import { FormControl, Validators } from '@angular/forms';
+import { MatFormFieldModule, MatInputModule, MatSelectModule } from '@angular/material';
+
+
+
+
+// COMPONENT
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -10,6 +20,23 @@ import { PropageComponent } from './propage/propage.component';
 import { LoginComponent } from './login/login.component';
 import { ServiceRequestComponent } from './service-request/service-request.component';
 import { CreatePropageComponent } from './create-propage/create-propage.component';
+
+
+
+// ROUTES
+import { RouterModule, Router, Routes } from '@angular/router';
+
+
+import { HttpClient } from '@angular/common/http';
+
+
+export const routes: Routes = [
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'main', component: PropageComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'index', component: AppComponent },
+
+];
 
 
 @NgModule({
@@ -25,9 +52,13 @@ import { CreatePropageComponent } from './create-propage/create-propage.componen
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
-     MatCheckboxModule,
-     MatIconModule,
-     MatMenuModule
+    MatCheckboxModule,
+    MatIconModule,
+    MatMenuModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatOptionModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
