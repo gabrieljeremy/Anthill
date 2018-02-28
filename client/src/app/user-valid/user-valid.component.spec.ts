@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PropageComponent } from './propage.component';
+import { UserValidComponent } from './user-valid.component';
 
-describe('PropageComponent', () => {
-  let component: PropageComponent;
-  let fixture: ComponentFixture<PropageComponent>;
+describe('UserValidComponent', () => {
+  let component: UserValidComponent;
+  let fixture: ComponentFixture<UserValidComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PropageComponent ]
+      declarations: [ UserValidComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PropageComponent);
+    fixture = TestBed.createComponent(UserValidComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
