@@ -10,15 +10,25 @@ const BASE_URL = 'http://localhost:8069/api';
 @Injectable()
 export class UserService {
 
-  constructor(public http: HttpClient) {}
+  constructor(public http: HttpClient, public router: Router) { }
 
-  postUser(user: User) {
-    this.http
-      .post(`${BASE_URL}/accounts/createAccount`, JSON.stringify(user), {
-        headers: HEADER
-      })
+
+  createUser(user: User) {
+    return this.http.post(`${BASE_URL}/accounts/createAccount`, JSON.stringify(user), {
+      headers: HEADER
+    })
       .toPromise()
       .catch(err => console.log(err.message));
   }
+
+
+  updateUser(user: User) {
+    return this.http.put(`${BASE_URL}/accounts/update`, JSON.stringify(user), {
+      headers: HEADER
+    })
+      .toPromise()
+      .catch(err => console.log(err.message));
+  }
+
 
 }
