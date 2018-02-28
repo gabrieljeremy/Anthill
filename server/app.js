@@ -30,6 +30,11 @@ server.route({
     path:'/api/accounts/login', 
     handler: AccountController.login    
 });
+server.route({
+    method: 'POST',
+    path:'/api/accounts/update', 
+    handler: AccountController.update    
+});
 
 
 // Start the server
