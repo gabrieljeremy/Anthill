@@ -2,27 +2,33 @@
   <div class="containerLeft">
     <div class="loginForm">
       <h2>LOGIN</h2>
+      <form>
       <mat-form-field>
         <input matInput placeholder="Enter your email" required>
-        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
       </mat-form-field>
       <mat-form-field>
         <input matInput type="password" placeholder="Enter your password" required>
       </mat-form-field>
+      <!-- <button color="primary" mat-raised-button>Submit</button> -->
+      </form>
     </div>
 
   </div>
   <div class="containerRight">
     <div class="registerForm">
       <h2>Register</h2>
-
-      <mat-form-field>
-        <input matInput placeholder="Enter your email" required>
-        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput type="password" placeholder="Enter your password" required>
-      </mat-form-field>
+      <form>
+        <mat-form-field>
+          <input matInput placeholder="Enter your email" required>
+          <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="password" placeholder="Enter your password" required>
+          <input matInput type="password" placeholder="Confirm password" required>
+        </mat-form-field>
+        <!-- <button color="primary" mat-raised-button>Submit</button> -->
+      </form>
     </div>
   </div>
 

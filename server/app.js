@@ -31,6 +31,12 @@ server.route({
     handler: AccountController.login    
 });
 
+server.route({
+    method: 'GET',
+    path:'/api/accounts/login', 
+    handler: AccountController.login    
+});
+
 
 // Start the server
 async function start() {

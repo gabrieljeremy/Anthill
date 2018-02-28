@@ -27,7 +27,7 @@ import { CreatePropageComponent } from './create-propage/create-propage.componen
 import { RouterModule, Router, Routes } from '@angular/router';
 
 
-import { HttpClient } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 
 
 export const routes: Routes = [
