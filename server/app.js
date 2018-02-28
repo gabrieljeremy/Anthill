@@ -21,7 +21,7 @@ const server = Hapi.server({
 // Add the route
 ////////////   ROUTES FOR ACCOUNTS ///////////////////////////////
 server.route({
-    method: 'Get',
+    method: 'GET',
     path:'/api/accounts', 
     handler: AccountController.hello
 });
@@ -41,17 +41,6 @@ server.route({
     handler: AccountController.update    
 });
 
-server.route({
-    method: 'GET',
-    path:'/api/accounts/login', 
-    handler: AccountController.login    
-});
-
-server.route({
-    method: 'GET',
-    path:'/api/accounts/login', 
-    handler: AccountController.login    
-});
 
 
 // Start the server
