@@ -32,12 +32,14 @@ import { RegisterComponent } from './user-invalid/register/register.component';
 
 
 
-export const routes: Routes = [
-  { path: '', redirectTo: 'index', pathMatch: 'full' },
-  { path: 'index', component: AppComponent },
+const appRoutes: Routes = [
+  { path: '', component: UserInvalidComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
 
+  // otherwise redirect to home
+  { path: '**', redirectTo: '' }
 ];
-
 
 @NgModule({
   declarations: [
