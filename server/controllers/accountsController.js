@@ -14,12 +14,12 @@ exports.createAccount = async (req,h) => {
        console.log('ok to save')
        const account = await new Account(req.payload);
        try{
-       await account.save()
+        await account.save()
            account.password='';
            return account;
        }catch(e){
            console.log(e)
-           return e;    
+           return Boom.serverUnavailable('e');     
        }
     }
     else{ 
@@ -34,6 +34,17 @@ exports.login = async (req,h) => {
         return account;
     } 
     else return Boom.badData('Authentication failed')
-     
+}
+exports.update = async (req,h) => {
+    req.payload.status = 'active';
     
+    try{
+        let account = await Account.findByIdAndUpdate (req.payload._id, req.payload);
+        
+        return account;
+         
+    }catch(e){
+           console.log(e)
+           return Boom.serverUnavailable('e');    
+    }
 }

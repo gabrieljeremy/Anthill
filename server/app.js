@@ -21,12 +21,28 @@ const server = Hapi.server({
 // Add the route
 ////////////   ROUTES FOR ACCOUNTS ///////////////////////////////
 server.route({
+    method: 'Get',
+    path:'/api/accounts', 
+    handler: AccountController.hello
+});
+server.route({
     method: 'POST',
     path:'/api/accounts/createAccount', 
     handler: AccountController.createAccount
 });
 server.route({
     method: 'POST',
+    path:'/api/accounts/login', 
+    handler: AccountController.login    
+});
+server.route({
+    method: 'POST',
+    path:'/api/accounts/update', 
+    handler: AccountController.update    
+});
+
+server.route({
+    method: 'GET',
     path:'/api/accounts/login', 
     handler: AccountController.login    
 });
