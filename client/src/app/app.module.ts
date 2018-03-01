@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, HostBinding } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -18,7 +17,7 @@ import { AppComponent } from './app.component';
 
 
 // ROUTES
-import { RouterModule, Router, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
 
 // SERVICE
@@ -39,7 +38,7 @@ const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
 
   // otherwise redirect to home
-  { path: '**', redirectTo: '' }
+  { path: '*', redirectTo: '' }
 ];
 
 @NgModule({
@@ -55,7 +54,6 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
     MatIconModule,
@@ -65,7 +63,8 @@ const appRoutes: Routes = [
     MatOptionModule,
     MatSelectModule,
     HttpClientModule,
-    RouterModule,
+    RouterModule.forRoot(appRoutes),
+    RouterModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
