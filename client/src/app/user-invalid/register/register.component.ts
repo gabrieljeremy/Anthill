@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../../shared/models/user.model';
 import { UserService } from '../../shared/services/user.service';
 
+import { FormGroup, FormControl } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -9,18 +11,29 @@ import { UserService } from '../../shared/services/user.service';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  User: any = {};
-  msg:any;
-  loading = false;
+  userForm: FormGroup;
 
-  constructor(public userService: UserService) { }
 
-  ngOnInit() {
-    this.msg = this.userService.hello()
+  constructor(public userService: UserService) {
+
   }
 
-  // register() {
-  //   this.userService.createUser(user as User);
-  // }
+
+  ngOnInit() {
+    this.userForm = new FormGroup({
+      firstName: new FormControl(),
+      lastName: new FormControl(),
+      email: new FormControl(),
+      password: new FormControl(),
+    });
+  }
+
+
+  onRegister(user) {
+      this.userService.createUser(user as User);
+      console.log('onRegister');
+
+
+  }
 
 }
