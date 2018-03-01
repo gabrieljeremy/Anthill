@@ -1,29 +1,44 @@
-<div>
-  <h2>Register</h2>
-  <form name="form" (ngSubmit)="register()" novalidate>
+
+<form [formGroup]="userForm" (ngSubmit)="onRegister(userForm.value)">
+
+
       <div class="form-group">
-          <label for="firstName">First Name</label>
-          <input type="text" class="form-control" name="firstName" ng-model="firstname" required />
+        <label>First Name</label>
+        <input type="text"
+               class="form-control"
+               formControlName="firstName"
+               required>
       </div>
+
       <div class="form-group">
-          <label for="lastName">Last Name</label>
-          <input type="text" class="form-control" name="lastName" ng-model="lastname"  required />
+        <label>Last Name</label>
+        <input type="text"
+               class="form-control"
+               formControlName="lastName"
+               required>
       </div>
-      <div class="form-group">
-          <label for="username">Email</label>
-          <input type="text" class="form-control" name="username" ng-model="email" required />
-      </div>
-      <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" class="form-control" name="password" ng-model="password" required />
-      </div>
-    <button type="submit">Submit</button>
+
+
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email"
+             class="form-control"
+             formControlName="email"
+             required>
+    </div>
+
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password"
+             class="form-control"
+             formControlName="password"
+             required>
+    </div>
+
+    <pre>{{userForm.value | json}}</pre>
+
+    <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+
+
   </form>
-</div>
-
-
-<p>Register works !</p>
-<!--
-<p>{{hello}}</p> -->
-
-

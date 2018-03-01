@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../../shared/models/user.model';
 import { UserService } from '../../shared/services/user.service';
 
+import { FormGroup, FormControl } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -9,45 +11,29 @@ import { UserService } from '../../shared/services/user.service';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  user: any;
-  msg: any;
+  userForm: FormGroup;
 
 
-  constructor(public userService: UserService) { }
+  constructor(public userService: UserService) {
+
+  }
+
 
   ngOnInit() {
-    // this.msg = this.userService.hello();
+    this.userForm = new FormGroup({
+      firstName: new FormControl(),
+      lastName: new FormControl(),
+      email: new FormControl(),
+      password: new FormControl(),
+    });
   }
 
-  register() {
-    this.userService.createUser(user as User)
-    .subscribe(
-        data => {
-            console.log('Registration successful');
 
-        },
-        error => {
-          console.log(error);
-        });
+  onRegister(user) {
+      this.userService.createUser(user as User);
+      console.log('onRegister');
+
+
   }
 
-  // hello() {
-  //   this.msg = this.userService.hello();
-  // }
-
-  // register() {
-  //   this.loading = true;
-  //   this.userService.create(this.model)
-  //     .subscribe(
-  //       data => {
-  //         this.alertService.success('Registration successful', true);
-  //         this.router.navigate(['/login']);
-  //       },
-  //       error => {
-  //         this.alertService.error(error);
-  //         this.loading = false;
-  //       });
-  // }
 }
-
-
