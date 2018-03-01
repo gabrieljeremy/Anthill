@@ -29,6 +29,7 @@ import { DashboardComponent } from './user-valid/dashboard/dashboard.component';
 import { UserInvalidComponent } from './user-invalid/user-invalid.component';
 import { LoginComponent } from './user-invalid/login/login.component';
 import { RegisterComponent } from './user-invalid/register/register.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -63,6 +64,8 @@ const appRoutes: Routes = [
     MatInputModule,
     MatOptionModule,
     MatSelectModule,
+    HttpClientModule,
+    RouterModule,
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
