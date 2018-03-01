@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-
+import { User } from '../../shared/models/user.model';
 import { UserService } from '../../shared/services/user.service';
 
 
@@ -10,18 +9,18 @@ import { UserService } from '../../shared/services/user.service';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  model: any = {};
+  User: any = {};
+  msg:any;
   loading = false;
 
-  constructor(
-    private userService: UserService) { }
+  constructor(public userService: UserService) { }
 
   ngOnInit() {
+    this.msg = this.userService.hello();
   }
 
-  register() {
-    this.loading = true;
-    this.userService.createUser(this.model);
-  }
+  // register() {
+  //   this.userService.createUser(user as User);
+  // }
 
 }

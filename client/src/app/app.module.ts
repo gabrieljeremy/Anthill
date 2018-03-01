@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, HostBinding } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';  // replaces previous Http service
+import { FormsModule } from '@angular/forms';
 
 
 // Material ANGULAR
@@ -19,7 +21,7 @@ import { AppComponent } from './app.component';
 
 // ROUTES
 import { RouterModule, Router, Routes } from '@angular/router';
-import { HttpModule } from '@angular/http';
+
 
 // SERVICE
 import { UserService } from './shared/services/user.service';
@@ -63,6 +65,7 @@ const appRoutes: Routes = [
     MatInputModule,
     MatOptionModule,
     MatSelectModule,
+    HttpClientModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
