@@ -22,7 +22,7 @@ export class UserService {
   //     .catch(err => console.log(err.message));
   // }
   hello() {
-    return this.http.get(`http://localhost:8069/api/accounts`).toPromise();
+    return this.http.get(`http://localhost:8069/api/accounts`);
 
   }
 
