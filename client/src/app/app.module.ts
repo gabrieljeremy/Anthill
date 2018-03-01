@@ -13,6 +13,13 @@ import { MatFormFieldModule, MatInputModule, MatSelectModule } from '@angular/ma
 // COMPONENT
 
 import { AppComponent } from './app.component';
+import { UserValidComponent } from './user-valid/user-valid.component';
+import { MenuComponent } from './user-valid/menu/menu.component';
+import { DashboardComponent } from './user-valid/dashboard/dashboard.component';
+import { UserInvalidComponent } from './user-invalid/user-invalid.component';
+import { LoginComponent } from './user-invalid/login/login.component';
+import { RegisterComponent } from './user-invalid/register/register.component';
+
 
 
 // ROUTES
@@ -21,13 +28,10 @@ import { RouterModule, Router, Routes } from '@angular/router';
 
 // SERVICE
 import { UserService } from './shared/services/user.service';
-import { UserValidComponent } from './user-valid/user-valid.component';
-import { MenuComponent } from './user-valid/menu/menu.component';
-import { DashboardComponent } from './user-valid/dashboard/dashboard.component';
-import { UserInvalidComponent } from './user-invalid/user-invalid.component';
-import { LoginComponent } from './user-invalid/login/login.component';
-import { RegisterComponent } from './user-invalid/register/register.component';
 
+
+// RESOLVER
+// import { UserResolver } from './shared/resolvers/user.resolvers';
 
 
 
