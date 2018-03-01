@@ -34,6 +34,7 @@ import { RegisterComponent } from './user-invalid/register/register.component';
 
 
 
+
 const appRoutes: Routes = [
   { path: '', component: UserInvalidComponent },
   { path: 'login', component: LoginComponent },
@@ -65,7 +66,8 @@ const appRoutes: Routes = [
     MatInputModule,
     MatOptionModule,
     MatSelectModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule,
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

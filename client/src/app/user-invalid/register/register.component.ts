@@ -16,7 +16,7 @@ export class RegisterComponent implements OnInit {
   constructor(public userService: UserService) { }
 
   ngOnInit() {
-    this.msg = this.userService.hello();
+    //this.msg = this.userService.hello()
   }
 
   // register() {

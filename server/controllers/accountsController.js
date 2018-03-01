@@ -39,12 +39,13 @@ exports.update = async (req,h) => {
     req.payload.status = 'active';
     
     try{
-        let account = await Account.findByIdAndUpdate (req.payload._id, req.payload);
+        let account = await Account.findOneAndUpdate({email: req.payload.email}, req.payload);
         
-        return account;
+       
+        return Account.findByEmail(account.email);
          
     }catch(e){
            console.log(e)
-           return Boom.serverUnavailable('e');    
+           return Boom.serverUnavailable(e);    
     }
 }
