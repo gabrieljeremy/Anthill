@@ -20,6 +20,14 @@ export class UserService {
       .catch(err => console.log(err.message));
   }
 
+  login(user: User) {
+    console.log(user);
+    return this.http.post(`${BASE_URL}/accounts/login`, JSON.stringify(user), {
+      headers: HEADER
+    })
+      .toPromise()
+      .catch(err => console.log(err.message));
+  }
 
   // hello() {
   //   return this.http.get(`${BASE_URL}/api/accounts`).subscribe((res) => {
