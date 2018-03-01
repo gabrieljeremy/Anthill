@@ -30,6 +30,11 @@ server.route({
     path:'/api/accounts/login', 
     handler: AccountController.login    
 });
+server.route({
+    method: 'GET',
+    path:'/api/accounts', 
+    handler: AccountController.hello    
+});
 
 
 // Start the server
