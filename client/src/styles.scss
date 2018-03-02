@@ -2,6 +2,9 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway');
 
+@import "./_scss/_variables.scss";
+
+
 html, *, body {
   // font-family: 'Open Sans', sans-serif;
   font-family: 'Raleway', sans-serif;
@@ -24,3 +27,55 @@ a {
   color:white;
 }
 
+app-login {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  background: $primary-color;
+  height: 100%;
+  box-shadow: $shadow-lvl2;
+  h2 {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+  }
+  .loginForm {
+    box-shadow: $shadow-lvl2;
+  }
+}
+
+app-register {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  background: $secondary-color;
+  height: 100%;
+  box-shadow: $shadow-lvl2;
+  h2 {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+  }
+  .registerForm {
+    box-shadow: $shadow-lvl2;
+  }
+
+}
+
+.hiddenForm {
+  display: none !important;
+}
+
+@media screen and (max-width: 800px) {
+  app-register {
+    position: relative;
+    width: 100%;
+   }
+  app-login {
+    position: relative;
+
+    width: 100%;
+  }
+}

@@ -1,18 +1,51 @@
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
- <div class="form-group">
-    <label>Email</label>
-    <input type="email"
+<h2> Connexion</h2>
+
+
+<form class="loginForm" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+    <mat-form-field class="example-full-width">
+        <mat-icon>account_circle</mat-icon>
+    <!-- <label>Email</label> -->
+    <input matInput type="email"
            class="form-control"
            formControlName="email"
+<<<<<<< HEAD
            required value="b.carbonnelle@gmail.de">
   </div>
   <div class="form-group">
     <label>Password</label>
     <input type="password"
+=======
+           placeholder="First Name"
+           required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-icon>lock</mat-icon>
+    <!-- <label>Password</label> -->
+    <input matInput type="password"
+>>>>>>> 1b282b9be23f268bf7952c6ac740ca2840119b9f
            class="form-control"
            formControlName="password"
+           placeholder="Password"
            required>
-  </div>
-  <pre>{{loginForm.value | json}}</pre>
-  <button class="btn waves-effect waves-light" type="submit" name="action">Connexion</button>
+    </mat-form-field>
+
+  <!-- <pre>{{loginForm.value | json}}</pre> -->
+  <button  mat-raised-button color="primary" type="submit" name="action">Connexion</button>
 </form>
+
+
+<!-- <mat-form-field class="example-full-width">
+    <mat-icon>account_circle</mat-icon>
+    <input matInput type="text" class="form-control" formControlName="firstName" title="Please enter your firstName" placeholder="First Name">
+    <mat-error *ngIf="userForm.get('firstName').hasError('required') && userForm.get('firstName').touched">Firstname required</mat-error>
+    <mat-error *ngIf="userForm.get('firstName').hasError('minlength') && userForm.get('firstName').touched">Firstname required min. 3 letters</mat-error>
+    <mat-error *ngIf="userForm.get('firstName').hasError('maxlength') && userForm.get('firstName').touched">Firstname required max 15 letters</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-icon>account_circle</mat-icon>
+    <input matInput type="text" class="form-control" formControlName="lastName" title="Please enter your lastName" placeholder="Last Name">
+    <mat-error *ngIf="userForm.get('lastName').hasError('required') && userForm.get('lastName').touched">lastName required</mat-error>
+    <mat-error *ngIf="userForm.get('lastName').hasError('minlength') && userForm.get('lastName').touched">lastName required min. 3 letters</mat-error>
+    <mat-error *ngIf="userForm.get('lastName').hasError('maxlength') && userForm.get('lastName').touched">lastName required max 15 letters</mat-error>
+  </mat-form-field> -->

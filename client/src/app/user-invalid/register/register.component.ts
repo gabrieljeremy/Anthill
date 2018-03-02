@@ -6,12 +6,14 @@ import { AbstractControl, FormGroup, FormControl, Validators } from '@angular/fo
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialogRef } from '@angular/material';
 
+
+declare var $: any;
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-
 
 
 export class RegisterComponent implements OnInit {
@@ -30,6 +32,14 @@ export class RegisterComponent implements OnInit {
 
 
   ngOnInit() {
+
+    $('.buttonSubscribe').click(function (e) {
+      e.preventDefault();
+      $('.registerForm').toggleClass('hiddenForm');
+      $('.buttonSubscribe').toggleClass('hiddenForm');
+    });
+
+
     const invalid = true;
     const valid = false;
     console.log(invalid);
@@ -61,6 +71,9 @@ export class RegisterComponent implements OnInit {
     }
 
 
+  }
+  toto() {
+    console.log('toto bobo');
   }
 
 
