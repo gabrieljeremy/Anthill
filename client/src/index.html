@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Client</title>
@@ -9,7 +10,20 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
   <app-root></app-root>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <script src="./js/jquery.js"></script> -->
+
+  <script>
+    $(".buttonSubscribe").click(function () {
+      $(".registerForm").toggleClass("hiddenForm");
+      $(".buttonSubscribe").toggleClass("hiddenForm");
+    });
+
+  </script>
+
 </body>
+
 </html>

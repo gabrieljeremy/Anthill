@@ -1,3 +1,9 @@
+<h2>Bonjour, {{userForm.value.firstName}} es-tu es prêt à nous rejoindre ?</h2>
+
+
+<button mat-raised-button color="primary" class="buttonSubscribe">Subscribe</button>
+
+
 <form class="registerForm" [formGroup]="userForm" (ngSubmit)="onRegister(userForm.value)">
 
   <mat-form-field class="example-full-width">
@@ -10,7 +16,7 @@
 
   <mat-form-field class="example-full-width">
     <mat-icon>account_circle</mat-icon>
-    <input matInput type="text" class="form-control" formControlName="lastName" title="Please enter your lastName" placeholder="L ast Name">
+    <input matInput type="text" class="form-control" formControlName="lastName" title="Please enter your lastName" placeholder="Last Name">
     <mat-error *ngIf="userForm.get('lastName').hasError('required') && userForm.get('lastName').touched">lastName required</mat-error>
     <mat-error *ngIf="userForm.get('lastName').hasError('minlength') && userForm.get('lastName').touched">lastName required min. 3 letters</mat-error>
     <mat-error *ngIf="userForm.get('lastName').hasError('maxlength') && userForm.get('lastName').touched">lastName required max 15 letters</mat-error>
@@ -41,14 +47,12 @@
 
 </form>
 
-<!--
+
 <div class="dialog" *ngIf="valid == true">
   <div class="box_dialog">
     It's done you are registrer !
-    <button >X</button>
+    <button ></button>
   </div>
-</div> -->
+</div>
 
-<!-- <pre>{{userForm.value |json}}</pre>
-  <p>TEST</p>
-  <pre>{{userForm.value.confirmPassword }}</pre> -->
+

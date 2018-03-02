@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, HostBinding } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 // Material ANGULAR
 import { MatButtonModule, MatCheckboxModule, MatIconModule, MatMenuModule, MatOptionModule } from '@angular/material';
 import { FormControl, Validators, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatFormFieldModule, MatInputModule, MatSelectModule } from '@angular/material';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 
 
 
@@ -65,7 +65,6 @@ const appRoutes: Routes = [
     MatInputModule,
     MatOptionModule,
     MatSelectModule,
-    BrowserAnimationsModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
     RouterModule,
