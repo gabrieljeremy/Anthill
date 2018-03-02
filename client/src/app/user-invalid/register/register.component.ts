@@ -42,8 +42,8 @@ export class RegisterComponent implements OnInit {
 
 
   onRegister(user) {
-    const pwd = this.userForm.get('password');
-    const cpwd = this.userForm.get('confirm_password');
+    const pwd = this.userForm.value.password;
+    const cpwd = this.userForm.value.confirmPassword;
 
     if (pwd === cpwd) {
       // this.userForm.removeControl('confirmPassword');
