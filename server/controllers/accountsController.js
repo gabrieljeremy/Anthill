@@ -11,29 +11,32 @@ exports.hello = () => {
 exports.createAccount = async (req,h) => {
     let account = await Account.findByEmail ( req.payload.email);
     if(!account){
-       console.log('ok to save')
+      
        const account = await new Account(req.payload);
        try{
         await account.save()
            account.password='';
            return account;
        }catch(e){
-           console.log(e)
-           return Boom.serverUnavailable('e');     
+           
+           return `{ "message" : "`+e+`"}`      
        }
     }
     else{ 
-       return Boom.badData('Email already in use')
+       return `{ "message" : "email already in use"}`
     }
     
 }
 exports.login = async (req,h) => {
     let account = await Account.findByEmail ( req.payload.email);
-    if (bcrypt.compareSync(req.payload.password, account.password)){
-        account.password='';
-        return account;
-    } 
-    else return Boom.badData('Authentication failed')
+    if (account){
+        if (bcrypt.compareSync(req.payload.password, account.password)){
+            account.password='';
+            return account;
+        } 
+        else return `{ "message" : "password invalid"}`
+    }
+    else return `{ "message" : "email not found"}`
 }
 exports.update = async (req,h) => {
     req.payload.status = 'active';
@@ -46,6 +49,6 @@ exports.update = async (req,h) => {
          
     }catch(e){
            console.log(e)
-           return Boom.serverUnavailable(e);    
+           return `{ "message" : "`+e+`"}`  
     }
 }
