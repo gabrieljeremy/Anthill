@@ -2,22 +2,24 @@ import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { User } from '../../shared/models/user.model';
 import { UserService } from '../../shared/services/user.service';
 
-// import { CustomValidators } from '../../shared/validator';
-
-
-import { AbstractControl, FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { AbstractControl, FormGroup, FormControl, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
+
+
+
 export class RegisterComponent implements OnInit {
 
   userForm: FormGroup;
   invalid: boolean;
+  valid: boolean;
+
 
 
 
@@ -26,8 +28,10 @@ export class RegisterComponent implements OnInit {
 
 
 
+
   ngOnInit() {
     const invalid = true;
+    const valid = false;
     console.log(invalid);
 
     this.userForm = new FormGroup({
@@ -46,12 +50,10 @@ export class RegisterComponent implements OnInit {
     const cpwd = this.userForm.value.confirmPassword;
 
     if (pwd === cpwd) {
-      // this.userForm.removeControl('confirmPassword');
       console.log(this.userForm.value);
       console.log('ok Onregister');
       this.userService.createUser(user as User);
-      // this.userForm.reset('confirmPassword');
-
+      return this.valid = true;
     } else {
       console.log('error password');
       return this.invalid = false;
