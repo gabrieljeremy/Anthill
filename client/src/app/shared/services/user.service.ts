@@ -20,8 +20,7 @@ export class UserService {
       .catch(err => console.log(err.message));
   }
 
-  login(user: User) {
-    console.log(user);
+  login(user: User) {   
     return this.http.post(`${BASE_URL}/accounts/login`, JSON.stringify(user), {
       headers: HEADER
     })
