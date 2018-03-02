@@ -2,39 +2,17 @@
 
 
 <form class="loginForm" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
-    <mat-form-field class="example-full-width">
-        <mat-icon>email</mat-icon>
-    <!-- <label>Email</label> -->
-    <input matInput type="email"
-           class="form-control"
-           formControlName="email"
-<<<<<<< HEAD
-           placeholder="Email"
-=======
-<<<<<<< HEAD
-           required value="b.carbonnelle@gmail.de">
-  </div>
-  <div class="form-group">
-    <label>Password</label>
-    <input type="password"
-=======
-           placeholder="First Name"
->>>>>>> 93d4456258e84eb5bbd38c89826e48478f9bf82e
-           required>
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-        <mat-icon>lock</mat-icon>
-    <!-- <label>Password</label> -->
-    <input matInput type="password"
->>>>>>> 1b282b9be23f268bf7952c6ac740ca2840119b9f
-           class="form-control"
-           formControlName="password"
-           placeholder="Password"
-           required>
-    </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-icon>email</mat-icon>
+    <input matInput type="email" class="form-control" formControlName="email" placeholder="Email" required>
+  </mat-form-field>
 
-  <!-- <pre>{{loginForm.value | json}}</pre> -->
-  <button  mat-raised-button color="primary" type="submit" name="action">Connexion</button>
+  <mat-form-field class="example-full-width">
+    <mat-icon>lock</mat-icon>
+    <input matInput type="password" class="form-control" formControlName="password" placeholder="Password" required>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" name="action">Connexion</button>
   <a class="forgotPassword">Forgot your password ?</a>
 </form>
 
@@ -42,19 +20,12 @@
 <div class="dialogReset hiddenForm">
 
   <form class="box_dialog" action="POST">
-      <button class="closeReset"><mat-icon>close</mat-icon></button>
+    <button class="closeReset">
+      <mat-icon>close</mat-icon>
+    </button>
     <h3>SEND RESET PASSWORD EMAIL</h3>
-      <mat-form-field class="example-full-width">
 
-      <!-- <label>Email</label> -->
-      <input matInput type="email"
-             class="form-control"
-             formControlName="email"
-             placeholder="Email"
-             required>
-      </mat-form-field>
-  <button  mat-raised-button color="primary" type="submit" name="action">Send Email</button>
+    <button mat-raised-button color="primary" type="submit" name="action">Send Email</button>
 
   </form>
 </div>
-

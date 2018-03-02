@@ -30,14 +30,14 @@ export class LoginComponent implements OnInit {
 
   async onSubmit(user)  {
     const response = await this.userService.login(user as User)
-    
+
       console.log(response);
       if (response['message']) {
         console.log(response['message']);
       } else {
         sessionStorage.setItem('user',  JSON.stringify(response));
       }
-    
+
   }
 
 }
