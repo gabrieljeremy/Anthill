@@ -1,10 +1,10 @@
-<h2>Bonjour, {{userForm.value.firstName}} es-tu es prêt à nous rejoindre ?</h2>
+<h2>Bonjour, {{userForm.value.firstName}} rejoins-nous!</h2>
 
 
-<button mat-raised-button color="primary" class="buttonSubscribe">Subscribe</button>
+<button mat-raised-button color="primary" class="buttonSubscribe" (click)="toto()"> Subscribe</button>
 
 
-<form class="registerForm" [formGroup]="userForm" (ngSubmit)="onRegister(userForm.value)">
+<form class="registerForm hiddenForm" [formGroup]="userForm" (ngSubmit)="onRegister(userForm.value)">
 
   <mat-form-field class="example-full-width">
     <mat-icon>account_circle</mat-icon>
@@ -55,4 +55,10 @@
   </div>
 </div>
 
+
+<script>
+      document.getElementsByClassName('buttonSubscribe')[0].addEventListener('click', function (){
+      console.log('tata')
+    })
+</script>
 

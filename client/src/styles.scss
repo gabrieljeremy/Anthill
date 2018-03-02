@@ -40,6 +40,9 @@ app-login {
     color: white;
     text-transform: uppercase;
   }
+  .loginForm {
+    box-shadow: $shadow-lvl2;
+  }
 }
 
 app-register {
@@ -55,9 +58,24 @@ app-register {
     color: white;
     text-transform: uppercase;
   }
+  .registerForm {
+    box-shadow: $shadow-lvl2;
+  }
 
 }
 
 .hiddenForm {
   display: none;
+}
+
+@media screen and (max-width: 800px) {
+  app-register {
+    position: relative;
+    width: 100%;
+   }
+  app-login {
+    position: relative;
+
+    width: 100%;
+  }
 }

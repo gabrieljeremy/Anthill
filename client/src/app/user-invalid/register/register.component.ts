@@ -62,6 +62,9 @@ export class RegisterComponent implements OnInit {
 
 
   }
+  toto() {
+    console.log('toto bobo');
+  }
 
 
 }
