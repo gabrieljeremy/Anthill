@@ -1,5 +1,3 @@
-
-
 .registerForm {
   background: whitesmoke;
   width: 500px;
@@ -15,8 +13,15 @@
   }
 }
 
+.buttonSubscribe {
+  transform: translate(-50%, -50%);
+  margin: 25% 50%;
+  font-size: 50px;
+  padding: 50px;
+}
+
 .dialog {
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
   left: 0;
@@ -28,6 +33,5 @@
     width: 200px;
     height: 150px;
     padding: 50px;
-
   }
 }
