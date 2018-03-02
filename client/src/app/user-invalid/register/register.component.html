@@ -1,10 +1,12 @@
 <h2>Bonjour, {{userForm.value.firstName}} rejoins-nous!</h2>
 
 
-<button mat-raised-button color="primary" class="buttonSubscribe" (click)="toto()"> Subscribe</button>
+<button mat-raised-button color="primary" class="buttonSubscribe" (click)="Subscribebutton()"> Subscribe</button>
 
 
 <form class="registerForm hiddenForm" [formGroup]="userForm" (ngSubmit)="onRegister(userForm.value)">
+
+    <button class="close"><mat-icon>close</mat-icon></button>
 
   <mat-form-field class="example-full-width">
     <mat-icon>account_circle</mat-icon>
@@ -39,8 +41,10 @@
     <mat-icon>lock_open</mat-icon>
     <input matInput type="password" class="form-control" formControlName="confirmPassword" title="Please re-enter your password"
       placeholder="Re-type password">
-    <mat-error *ngIf="invalid == false"> Invalid Password </mat-error>
+
   </mat-form-field>
+
+  <mat-error *ngIf="invalid == false"> Oh these passwords don't match. Try again  </mat-error>
 
   <button mat-raised-button color="primary" type="submit" class="btn button btn-success" [disabled]="!userForm.valid">Register</button>
 
@@ -50,15 +54,11 @@
 
 <div class="dialog" *ngIf="valid == true">
   <div class="box_dialog">
-    It's done you are registrer !
-    <button ></button>
+    It's done <br> you are registrer!
+    <button mat-raised-button color="primary">GO</button>
   </div>
 </div>
 
 
-<script>
-      document.getElementsByClassName('buttonSubscribe')[0].addEventListener('click', function (){
-      console.log('tata')
-    })
-</script>
+
 

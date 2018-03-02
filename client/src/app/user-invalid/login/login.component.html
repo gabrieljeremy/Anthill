@@ -3,12 +3,12 @@
 
 <form class="loginForm" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
     <mat-form-field class="example-full-width">
-        <mat-icon>account_circle</mat-icon>
+        <mat-icon>email</mat-icon>
     <!-- <label>Email</label> -->
     <input matInput type="email"
            class="form-control"
            formControlName="email"
-           placeholder="First Name"
+           placeholder="Email"
            required>
     </mat-form-field>
     <mat-form-field class="example-full-width">
@@ -23,21 +23,26 @@
 
   <!-- <pre>{{loginForm.value | json}}</pre> -->
   <button  mat-raised-button color="primary" type="submit" name="action">Connexion</button>
+  <a class="forgotPassword">Forgot your password ?</a>
 </form>
 
 
-<!-- <mat-form-field class="example-full-width">
-    <mat-icon>account_circle</mat-icon>
-    <input matInput type="text" class="form-control" formControlName="firstName" title="Please enter your firstName" placeholder="First Name">
-    <mat-error *ngIf="userForm.get('firstName').hasError('required') && userForm.get('firstName').touched">Firstname required</mat-error>
-    <mat-error *ngIf="userForm.get('firstName').hasError('minlength') && userForm.get('firstName').touched">Firstname required min. 3 letters</mat-error>
-    <mat-error *ngIf="userForm.get('firstName').hasError('maxlength') && userForm.get('firstName').touched">Firstname required max 15 letters</mat-error>
-  </mat-form-field>
+<div class="dialogReset hiddenForm">
 
-  <mat-form-field class="example-full-width">
-    <mat-icon>account_circle</mat-icon>
-    <input matInput type="text" class="form-control" formControlName="lastName" title="Please enter your lastName" placeholder="Last Name">
-    <mat-error *ngIf="userForm.get('lastName').hasError('required') && userForm.get('lastName').touched">lastName required</mat-error>
-    <mat-error *ngIf="userForm.get('lastName').hasError('minlength') && userForm.get('lastName').touched">lastName required min. 3 letters</mat-error>
-    <mat-error *ngIf="userForm.get('lastName').hasError('maxlength') && userForm.get('lastName').touched">lastName required max 15 letters</mat-error>
-  </mat-form-field> -->
+  <form class="box_dialog" action="POST">
+      <button class="closeReset"><mat-icon>close</mat-icon></button>
+    <h3>SEND RESET PASSWORD EMAIL</h3>
+      <mat-form-field class="example-full-width">
+
+      <!-- <label>Email</label> -->
+      <input matInput type="email"
+             class="form-control"
+             formControlName="email"
+             placeholder="Email"
+             required>
+      </mat-form-field>
+  <button  mat-raised-button color="primary" type="submit" name="action">Send Email</button>
+
+  </form>
+</div>
+

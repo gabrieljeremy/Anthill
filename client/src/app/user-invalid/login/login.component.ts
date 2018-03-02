@@ -5,6 +5,8 @@ import { UserService } from '../../shared/services/user.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
+declare var $: any;
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -18,6 +20,11 @@ export class LoginComponent implements OnInit {
     this.loginForm = new FormGroup({
       email: new FormControl(),
       password: new FormControl(),
+    });
+
+    $('.forgotPassword').click(function (e) {
+      e.preventDefault();
+      $('.dialogReset').toggleClass('hiddenForm');
     });
   }
 
