@@ -34,7 +34,7 @@ import { UserService } from './shared/services/user.service';
 
 const routes: Routes = [
   { path: '', component: UserInvalidComponent },
-  { path: 'valid', component: UserValidComponent }
+  { path: 'portal', component: UserValidComponent }
 ];
 
 @NgModule({
