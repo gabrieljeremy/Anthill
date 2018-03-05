@@ -46,7 +46,8 @@
 
   </mat-form-field>
 
-  <mat-error *ngIf="invalid == false"> Oh  Try again  </mat-error>
+  <mat-error *ngIf="invalid == false"> Oh {{msg}}. Try again </mat-error>
+
 
 
   <button mat-raised-button color="primary" type="submit" class="btn button btn-success" [disabled]="!userForm.valid">Register</button>
@@ -55,10 +56,10 @@
 </form>
 
 
-<div class="dialog" *ngIf="valid == true">
+<div class="dialog" *ngIf="successPopup == true">
   <div class="box_dialog">
     It's done <br> you are registrer!
-    <a mat-raised-button color="primary" [routerLink]="['/valid']">GO</a>
+    <a mat-raised-button color="primary" [routerLink]="['/portal']">GO</a>
   </div>
 </div>
 

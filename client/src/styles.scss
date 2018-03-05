@@ -77,6 +77,21 @@ app-register {
   display: none !important;
 }
 
+app-dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  app-my-requests {
+    border: 1px solid black;
+  }
+}
+
+
+
+
+
+
+
 @media screen and (max-width: 800px) {
   app-register {
     position: relative;

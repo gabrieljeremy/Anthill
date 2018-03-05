@@ -29,13 +29,17 @@ import { RouterModule, Router, Routes } from '@angular/router';
 
 // SERVICE
 import { UserService } from './shared/services/user.service';
+<<<<<<< HEAD
 import { AsideMenuComponent } from './user-valid/dashboard/aside-menu/aside-menu.component';
+=======
+import { MyRequestsComponent } from './user-valid/dashboard/my-requests/my-requests.component';
+>>>>>>> 1d72f22c28ae2a81715d8d27ce9b640ef4e9fc63
 
 
 
 const routes: Routes = [
   { path: '', component: UserInvalidComponent },
-  { path: 'valid', component: UserValidComponent }
+  { path: 'portal', component: UserValidComponent }
 ];
 
 @NgModule({
@@ -47,7 +51,11 @@ const routes: Routes = [
     UserInvalidComponent,
     LoginComponent,
     RegisterComponent,
+<<<<<<< HEAD
     AsideMenuComponent,
+=======
+    MyRequestsComponent,
+>>>>>>> 1d72f22c28ae2a81715d8d27ce9b640ef4e9fc63
 
   ],
   imports: [
