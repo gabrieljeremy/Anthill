@@ -31,18 +31,10 @@ import { RouterModule, Router, Routes } from '@angular/router';
 import { UserService } from './shared/services/user.service';
 
 
-// RESOLVER
-// import { UserResolver } from './shared/resolvers/user.resolvers';
 
-
-
-const appRoutes: Routes = [
+const routes: Routes = [
   { path: '', component: UserInvalidComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-
-  // otherwise redirect to home
-  { path: '*', redirectTo: '' }
+  { path: 'valid', component: UserValidComponent }
 ];
 
 @NgModule({
@@ -67,12 +59,13 @@ const appRoutes: Routes = [
     MatOptionModule,
     MatSelectModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(routes),
     RouterModule,
     ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule
   ],
+  exports: [RouterModule],
   providers: [UserService],
   bootstrap: [AppComponent]
 })

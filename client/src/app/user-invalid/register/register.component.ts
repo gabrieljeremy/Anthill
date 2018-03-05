@@ -6,6 +6,7 @@ import { AbstractControl, FormGroup, FormControl, Validators } from '@angular/fo
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialogRef } from '@angular/material';
 
+import { RouterModule, Router, Routes } from '@angular/router';
 
 declare var $: any;
 
@@ -38,6 +39,13 @@ export class RegisterComponent implements OnInit {
       $('.registerForm').toggleClass('hiddenForm');
       $('.buttonSubscribe').toggleClass('hiddenForm');
     });
+
+    $('.close').click(function (e) {
+      e.preventDefault();
+      $('.registerForm').toggleClass('hiddenForm');
+      $('.buttonSubscribe').toggleClass('hiddenForm');
+    });
+
 
 
     const invalid = true;
@@ -72,8 +80,9 @@ export class RegisterComponent implements OnInit {
 
 
   }
-  toto() {
-    console.log('toto bobo');
+
+  Subscribebutton() {
+    console.log('He is crazy i push the Subscribebutton!  ');
   }
 
 

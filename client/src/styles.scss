@@ -35,7 +35,9 @@ app-login {
   background: $primary-color;
   height: 100%;
   box-shadow: $shadow-lvl2;
+
   h2 {
+    margin-top: 100px;
     text-align: center;
     color: white;
     text-transform: uppercase;
@@ -43,6 +45,7 @@ app-login {
   .loginForm {
     box-shadow: $shadow-lvl2;
   }
+
 }
 
 app-register {
@@ -53,7 +56,13 @@ app-register {
   background: $secondary-color;
   height: 100%;
   box-shadow: $shadow-lvl2;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    width: 52%;
+    transition: 0.3s ease-in-out;
+  }
   h2 {
+    margin-top: 100px;
     text-align: center;
     color: white;
     text-transform: uppercase;
