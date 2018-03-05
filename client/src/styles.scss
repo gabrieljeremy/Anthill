@@ -107,10 +107,19 @@ app-dashboard {
   background-color: tomato;
   cursor: pointer;
   border-radius: 5px;
-  height: 60px;
+  min-height: 90px;
+  padding:0;
+  flex-wrap: wrap;
   span {
     margin: 0 auto;
-    color: white;    
+    color: white; 
+      
+  }
+  mat-icon{
+    color: white;
+    font-size: 3em;
+    margin:0;
+    
   }
 }
 @media screen and (max-width: 800px) {
