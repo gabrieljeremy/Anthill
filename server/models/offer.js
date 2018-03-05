@@ -32,5 +32,5 @@ const schema = new Schema({
   }
 });
 
-module.exports = mongoose.model('privateUser', schema);
+module.exports = mongoose.model('offer', schema);
 

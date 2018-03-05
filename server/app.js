@@ -4,6 +4,9 @@ require(`${process.cwd()}/models/professionalProfile`)
 require(`${process.cwd()}/models/offer`)
 require(`${process.cwd()}/models/request`)
 const AccountController = require ('./controllers/accountsController.js')
+const ProfessionalProfileController = require ('./controllers/professionalProfileController.js')
+const OfferController = require ('./controllers/offerController.js')
+const RequestController = require ('./controllers/requestController.js')
 ///////////////////////////////////
 const mongoose = require('mongoose');
 const Hapi = require('hapi');
@@ -31,11 +34,43 @@ server.route({
     handler: AccountController.login    
 });
 server.route({
-    method: 'GET',
-    path:'/api/accounts', 
-    handler: AccountController.hello    
+    method: 'POST',
+    path:'/api/accounts/update', 
+    handler: AccountController.update
 });
-
+////////////   ROUTES FOR PROFESSIONAL PROFILES  ///////////////////////////////
+server.route({
+    method: 'POST',
+    path:'/api/professionalProfile/create', 
+    handler: ProfessionalProfileController.create
+});
+server.route({
+    method: 'POST',
+    path:'/api/professionalProfile/update', 
+    handler: ProfessionalProfileController.update
+});
+////////////   ROUTES FOR REQUESTS  ///////////////////////////////
+server.route({
+    method: 'POST',
+    path:'/api/requests/create', 
+    handler: RequestController.create
+});
+server.route({
+    method: 'POST',
+    path:'/api/requests/update', 
+    handler: RequestController.update
+});
+////////////   ROUTES FOR OFFERS  ///////////////////////////////
+server.route({
+    method: 'POST',
+    path:'/api/offers/create', 
+    handler: OfferController.create
+});
+server.route({
+    method: 'POST',
+    path:'/api/offers/update', 
+    handler: OfferController.update
+});
 
 // Start the server
 async function start() {

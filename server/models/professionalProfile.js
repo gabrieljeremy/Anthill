@@ -9,7 +9,8 @@ const schema = new Schema({
   }],
   creationDate: {
     type: Date,
-    required: true
+    required: true,
+    default: Date.now
   },
   companyName: {
     type: String,
@@ -70,7 +71,8 @@ const schema = new Schema({
   },
   status: {
     type: String,
-    required: true
+    required: true,
+    default: 'active'
   }
 });
 
