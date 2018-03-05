@@ -8,11 +8,13 @@ import { Router, Routes } from '@angular/router';
 })
 export class UserValidComponent implements OnInit {
 
+
   constructor( private router: Router) { }
 
   ngOnInit() {
     const loggedUser = sessionStorage.getItem('user');
     if (!loggedUser) { this.router.navigate(['../']); }
+
   }
 
 }
