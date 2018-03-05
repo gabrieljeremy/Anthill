@@ -49,6 +49,16 @@ server.route({
     path:'/api/professionalProfile/update', 
     handler: ProfessionalProfileController.update
 });
+server.route({
+    method: 'POST',
+    path:'/api/professionalProfile/getMyProPage', 
+    handler: ProfessionalProfileController.getMyProPage
+});
+server.route({
+    method: 'POST',
+    path:'/api/professionalProfile/getAProPageById', 
+    handler: ProfessionalProfileController.getAProPageById
+});
 ////////////   ROUTES FOR REQUESTS  ///////////////////////////////
 server.route({
     method: 'POST',

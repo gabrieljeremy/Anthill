@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 // Material ANGULAR
-import { MatButtonModule, MatCheckboxModule, MatIconModule, MatMenuModule, MatOptionModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatIconModule, MatMenuModule, MatOptionModule,MatToolbarModule } from '@angular/material';
 import { FormControl, Validators, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatFormFieldModule, MatInputModule, MatSelectModule } from '@angular/material';
 import {MatTableModule} from '@angular/material/table';
@@ -68,8 +68,8 @@ const routes: Routes = [
     ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatTableModule
-
+    MatTableModule,
+    MatToolbarModule
   ],
   exports: [RouterModule],
   providers: [UserService],
