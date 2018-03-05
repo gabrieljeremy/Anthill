@@ -1,3 +1,5 @@
+
+
 <h2>Bonjour, {{userForm.value.firstName}} rejoins-nous!</h2>
 
 
@@ -55,9 +57,13 @@
 <div class="dialog" *ngIf="valid == true">
   <div class="box_dialog">
     It's done <br> you are registrer!
-    <button mat-raised-button color="primary">GO</button>
+    <a [routerLink]="['/valid']">GO</a>
   </div>
 </div>
+
+
+<router-outlet></router-outlet>
+
 
 
 

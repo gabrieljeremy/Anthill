@@ -6,6 +6,7 @@ import { AbstractControl, FormGroup, FormControl, Validators } from '@angular/fo
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialogRef } from '@angular/material';
 
+import { RouterModule, Router, Routes } from '@angular/router';
 
 declare var $: any;
 
@@ -81,7 +82,7 @@ export class RegisterComponent implements OnInit {
   }
 
   Subscribebutton() {
-    console.log('He is crazy i push the Subscribebutton! ');
+    console.log('He is crazy i push the Subscribebutton!  ');
   }
 
 
