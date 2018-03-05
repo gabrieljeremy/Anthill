@@ -12,7 +12,7 @@ exports.createAccount = async (req,h) => {
     let account = await Account.findByEmail ( req.payload.email);
     if(!account){
       
-       const account = await new Account(req.payload);
+       account = await new Account(req.payload);
        try{
         await account.save()
            account.password='';
