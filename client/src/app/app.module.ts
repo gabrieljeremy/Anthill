@@ -29,6 +29,7 @@ import { RouterModule, Router, Routes } from '@angular/router';
 
 // SERVICE
 import { UserService } from './shared/services/user.service';
+import { MyRequestsComponent } from './user-valid/dashboard/my-requests/my-requests.component';
 
 
 
@@ -46,6 +47,7 @@ const routes: Routes = [
     UserInvalidComponent,
     LoginComponent,
     RegisterComponent,
+    MyRequestsComponent,
 
   ],
   imports: [
