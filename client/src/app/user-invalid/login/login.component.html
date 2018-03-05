@@ -2,29 +2,6 @@
 
 
 <form class="loginForm" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
-<<<<<<< HEAD
-    <mat-form-field class="example-full-width">
-        <mat-icon>account_circle</mat-icon>
-    <!-- <label>Email</label> -->
-    <input matInput type="email"
-           class="form-control"
-           formControlName="email"
-           placeholder="First Name"
-           required>
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-        <mat-icon>lock</mat-icon>
-    <!-- <label>Password</label> -->
-    <input matInput type="password"
-           class="form-control"
-           formControlName="password"
-           placeholder="Password"
-           required>
-    </mat-form-field>
-
-  <!-- <pre>{{loginForm.value | json}}</pre> -->
-  <button  mat-raised-button color="primary" type="submit" name="action">Connexion</button>
-=======
   <mat-form-field class="example-full-width">
     <mat-icon>email</mat-icon>
     <input matInput type="email" class="form-control" formControlName="email" placeholder="Email" required>
@@ -37,7 +14,6 @@
 
   <button mat-raised-button color="primary" type="submit" name="action">Connexion</button>
   <a class="forgotPassword">Forgot your password ?</a>
->>>>>>> 9f708d67303e446890e810b257d03136f2661c9c
 </form>
 
 

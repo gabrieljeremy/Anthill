@@ -29,6 +29,7 @@ import { RouterModule, Router, Routes } from '@angular/router';
 
 // SERVICE
 import { UserService } from './shared/services/user.service';
+import { AsideMenuComponent } from './user-valid/dashboard/aside-menu/aside-menu.component';
 
 
 
@@ -46,6 +47,7 @@ const routes: Routes = [
     UserInvalidComponent,
     LoginComponent,
     RegisterComponent,
+    AsideMenuComponent,
 
   ],
   imports: [
