@@ -21,7 +21,7 @@ export class RegisterComponent implements OnInit {
 
   userForm: FormGroup;
   invalid: boolean;
-  valid: boolean;
+  successPopup: boolean;
   msg: String;
 
 
@@ -49,8 +49,8 @@ export class RegisterComponent implements OnInit {
 
 
     const invalid = true;
-    const valid = false;
-    const msg = '';
+    const successPopup = false;
+
 
     console.log(invalid);
 
@@ -76,14 +76,15 @@ export class RegisterComponent implements OnInit {
 
       if (response['message']) {
         console.log(response['message']);
-        const msg = response['message'];
+        this.msg = response['message'];
         return this.invalid = false;
       } else {
         sessionStorage.setItem('user', JSON.stringify(response));
-        return this.valid = true;
+        return this.successPopup = true;
       }
     } else {
       console.log('error password');
+      this.msg = 'error password';
       return this.invalid = false;
 
     }

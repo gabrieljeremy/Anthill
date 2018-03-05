@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
   }
 
   async onSubmit(user)  {
-    const response = await this.userService.login(user as User)
+    const response = await this.userService.login(user as User);
 
       console.log(response);
       if (response['message']) {
