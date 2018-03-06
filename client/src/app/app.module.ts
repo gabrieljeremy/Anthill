@@ -29,14 +29,18 @@ import { RouterModule, Router, Routes } from '@angular/router';
 
 // SERVICE
 import { UserService } from './shared/services/user.service';
+import { ProfessionalProfileService } from './shared/services/professionalProfile.service';
 import { AsideMenuComponent } from './user-valid/dashboard/aside-menu/aside-menu.component';
 import { MyRequestsComponent } from './user-valid/dashboard/my-requests/my-requests.component';
+import { NewProfessionalProfileComponent } from './user-valid/new-professional-profile/new-professional-profile.component';
 
 
 
 const routes: Routes = [
   { path: '', component: UserInvalidComponent },
-  { path: 'portal', component: UserValidComponent }
+  { path: 'portal', component: UserValidComponent },
+  { path: 'portal/CreateProfessionalProfile', component: NewProfessionalProfileComponent }
+
 ];
 
 @NgModule({
@@ -50,6 +54,7 @@ const routes: Routes = [
     RegisterComponent,
     AsideMenuComponent,
     MyRequestsComponent,
+    NewProfessionalProfileComponent
 
   ],
   imports: [
@@ -72,7 +77,7 @@ const routes: Routes = [
     MatToolbarModule
   ],
   exports: [RouterModule],
-  providers: [UserService],
+  providers: [UserService,ProfessionalProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

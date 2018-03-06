@@ -1,14 +1,18 @@
 <div>
-    <mat-toolbar class="toolbarItem"><mat-icon>account_box</mat-icon><br><br>
+    <mat-toolbar class="toolbarItem" (click)="GoToProfile()"><mat-icon>account_box</mat-icon>
       <span>My profile</span>
     </mat-toolbar>
-    <mat-toolbar class="toolbarItem"><mat-icon>work</mat-icon><br><br>
+    <mat-toolbar class="toolbarItem" (click)="GoToProPage()"><mat-icon>work</mat-icon>
       <span>My Pro-Page</span>
     </mat-toolbar>
-    <mat-toolbar class="toolbarItem"><mat-icon>search</mat-icon><br><br>
+    <mat-toolbar class="toolbarItem" (click)="GoToSearch()"><mat-icon>search</mat-icon>
       <span>Search for a Pro</span>
     </mat-toolbar>
-    <!-- <mat-card>Complete/Edit your profile</mat-card>
-    <mat-card>Create your Pro Page</mat-card>
-    <mat-card>Search for a Pro</mat-card> -->
+    <div class="dialog" *ngIf="ProPopup == true" (click)="CancelGoToProPage()">
+      <div class="box_dialog">
+        You don't have a Professional Page already! <br>        
+        <a mat-raised-button color="secondary" (click)="CancelGoToProPage()">Cancel</a>
+        <a mat-raised-button color="primary" [routerLink]="['/portal/CreateProfessionalProfile']">Create One</a>
+      </div>
+    </div>
 </div>
