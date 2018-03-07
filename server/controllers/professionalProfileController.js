@@ -4,7 +4,7 @@ const ProfessionalProfile = mongoose.model('professionalProfile');
 
 
 exports.create = async (req,h) => {
-    let professionalProfile = await new ProfesstionalProfile(req.payload);
+    let professionalProfile = await new ProfessionalProfile(req.payload);
        try{
         await professionalProfile.save()           
            return professionalProfile;
