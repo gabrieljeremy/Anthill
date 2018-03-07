@@ -1,14 +1,19 @@
 nav {
   background:#f36b56;
   color:white;
-  padding:0.5rem 0;
-  .logo {
-    font-size:3rem;
+  padding:20px;
+  h1 {
+    margin:0;
     float:left;
+    font-size:2rem;
+  }
+  img {
+    width:80px;
+    float:left;
+    margin-right:10px;
   }
   .menu {
     float:right;
-    padding-top:0.7rem;
     .material-icons {
       font-size: 2rem;
       margin-right:1rem;

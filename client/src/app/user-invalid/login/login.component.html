@@ -1,4 +1,4 @@
-<h2> Connexion</h2>
+<h2>Login</h2>
 
 
 <form class="loginForm" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
@@ -13,8 +13,8 @@
   </mat-form-field>
 
   <button mat-raised-button color="primary" type="submit" name="action">Connexion</button>
-  <a class="forgotPassword">Forgot your password ?</a>
   <mat-error *ngIf="msg"> {{msg}} </mat-error>
+  <a class="forgotPassword">Forgot your password ?</a>
 
 </form>
 

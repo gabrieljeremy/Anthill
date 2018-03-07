@@ -33,48 +33,11 @@ a {
   color: white;
 }
 
-app-login {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  background: $primary-color;
-  height: 100%;
-  box-shadow: $shadow-lvl2;
-  h2 {
-    margin-top: 100px;
-    text-align: center;
-    color: white;
-    text-transform: uppercase;
-  }
-  .loginForm {
-    box-shadow: $shadow-lvl2;
-  }
+.mat-input-element {
+  color:black;
 }
 
-app-register {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  background: $secondary-color;
-  height: 100%;
-  box-shadow: $shadow-lvl2;
-  transition: 0.3s ease-in-out;
-  &:hover {
-    width: 52%;
-    transition: 0.3s ease-in-out;
-  }
-  h2 {
-    margin-top: 100px;
-    text-align: center;
-    color: white;
-    text-transform: uppercase;
-  }
-  .registerForm {
-    box-shadow: $shadow-lvl2;
-  }
-}
+
 
 .hiddenForm {
   display: none !important;
@@ -94,15 +57,15 @@ app-dashboard {
       padding: 10px 0;
     }
   }
-  app-aside-menu {    
+  app-aside-menu {
     position: absolute;
     top: 75px;
     right: 20px;
-    
-    
+
+
   }
 }
-.toolbarItem{  
+.toolbarItem{
   margin-top: 20px;
   background-color: tomato;
   cursor: pointer;
@@ -112,14 +75,14 @@ app-dashboard {
   flex-wrap: wrap;
   span {
     margin: 0 auto;
-    color: white; 
-      
+    color: white;
+
   }
   mat-icon{
     color: white;
     font-size: 3em;
     margin:0;
-    
+
   }
 }
 @media screen and (max-width: 800px) {
