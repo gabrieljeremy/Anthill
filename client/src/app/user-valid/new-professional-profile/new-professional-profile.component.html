@@ -1,67 +1,83 @@
 <app-menu></app-menu>
 <div>
-  <form class="proForm" [formGroup]="proForm" (ngSubmit)="onSubmit(proForm.value)">
+  <form class="proForm" [formGroup]="proForm" (ngSubmit)="save(proForm.value)">
     <div class="formBlock">
       <h1>Professional informations</h1>
-      
-      <mat-form-field class="example-full-width">      
+
+      <mat-form-field class="example-full-width">
         <input matInput type="text" class="form-control" formControlName="companyName" placeholder="Company Name" required>
       </mat-form-field>
-      <mat-form-field class="example-full-width">      
+      <mat-form-field class="example-full-width">
         <input matInput type="text" class="form-control" formControlName="vat" placeholder="VAT" required>
       </mat-form-field>
-      <mat-form-field class="example-full-width">      
+      <mat-form-field class="example-full-width">
         <input matInput type="text" class="form-control" formControlName="sectors" placeholder="Business Sector" required>
       </mat-form-field>
-      <mat-form-field class="example-full-width">      
+      <mat-form-field class="example-full-width">
         <input matInput type="text" class="form-control" formControlName="activities" placeholder="Activity Description" required>
       </mat-form-field>
-      <mat-form-field class="example-full-width">      
+      <mat-form-field class="example-full-width">
         <input matInput type="text" class="form-control" formControlName="activityZone" placeholder="Activity Zone (km)" required>
       </mat-form-field>
-      <mat-form-field class="example-full-width">      
-          <input matInput type="text" class="form-control" formControlName="webSite" placeholder="Web Site" required>
-        </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput type="text" class="form-control" formControlName="webSite" placeholder="Web Site" required>
+      </mat-form-field>
     </div>
     <div class="formBlock">
+
       <h1>Contact Details</h1>
-      <mat-form-field class="example-full-width">      
-        <input matInput type="text" class="form-control" formControlName="contactFirstName" placeholder="Contact First Name" required value="{{loggedUser.firstName}}">
+      <mat-form-field class="example-full-width">
+        <input matInput type="text" class="form-control" formControlName="contactFirstName" placeholder="Contact First Name" required
+          value="{{loggedUser.firstName}}">
       </mat-form-field>
-      <mat-form-field class="example-full-width">      
-        <input matInput type="text" class="form-control" formControlName="contactLastName" placeholder="Contact Last Name" required value="{{loggedUser.lastName}}">
+      <mat-form-field class="example-full-width">
+        <input matInput type="text" class="form-control" formControlName="contactLastName" placeholder="Contact Last Name" required
+          value="{{loggedUser.lastName}}">
       </mat-form-field>
-      <mat-form-field class="example-full-width">      
+      <mat-form-field class="example-full-width">
         <input matInput type="text" class="form-control" formControlName="contactEmail" placeholder="Contact Email" required value="{{loggedUser.email}}">
       </mat-form-field>
-      <mat-form-field class="example-full-width">      
+      <mat-form-field class="example-full-width">
         <input matInput type="text" class="form-control" formControlName="fixedPhone" placeholder="Fixed Phone" required value="{{loggedUser.fixedPhone}}">
       </mat-form-field>
-      <mat-form-field class="example-full-width">      
+      <mat-form-field class="example-full-width">
         <input matInput type="text" class="form-control" formControlName="mobilePhone" placeholder="Mobile Phone" required value="{{loggedUser.mobilePhone}}">
-      </mat-form-field>      
-      <mat-form-field class="example-full-width">      
-        <input matInput type="text" class="form-control" formControlName="street" placeholder="Street - n°" required >
       </mat-form-field>
-      <mat-form-field class="example-full-width">      
-        <input matInput type="text" class="form-control" formControlName="zip" placeholder="Zip Code" required >
-      </mat-form-field>
-      <mat-form-field class="example-full-width">      
-        <input matInput type="text" class="form-control" formControlName="city" placeholder="City" required >
-      </mat-form-field>
-      <mat-form-field class="example-full-width">      
-        <input matInput type="text" class="form-control" formControlName="country" placeholder="Country" required >
-      </mat-form-field>      
+
+      <div formGroupName="address">
+
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" class="form-control" placeholder="Street" formControlName="street">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" class="form-control" placeholder="zip" formControlName="zip">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" class="form-control" placeholder="City" formControlName="city">
+        </mat-form-field>
+
+
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" class="form-control" placeholder="Country" formControlName="country">
+        </mat-form-field>
+
+      </div>
     </div>
 
-    
-    <div class="picList">        
-      <div class="addPicture" (click)="addPicture()"></div>    
+
+
+
+
+
+    <div class="picList">
+      <div class="addPicture" (click)="addPicture()"></div>
 
     </div>
-    <button mat-raised-button color="primary" type="submit" class="btn button btn-success" >Validate</button>
+    <button mat-raised-button color="primary" type="submit" class="btn button btn-success">Validate</button>
 
-  <mat-error *ngIf="msg"> {{msg}} </mat-error>
+    <mat-error *ngIf="msg"> {{msg}} </mat-error>
 
   </form>
 </div>

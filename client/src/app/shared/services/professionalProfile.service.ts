@@ -20,15 +20,15 @@ export class ProfessionalProfileService {
       .toPromise()
       .catch(err => console.log(err.message));
   }
-  getMyProfessionalProfile(user:User){
+  getMyProfessionalProfile(user: User) {
     return this.http.post(`${BASE_URL}/professionalProfile/getMyProPage`, JSON.stringify(user), {
       headers: HEADER
     })
       .toPromise()
       .catch(err => console.log(err.message));
   }
-  getAProfessionalProfileById(professionalProfileID:String){
-    return this.http.post(`${BASE_URL}/professionalProfile/getAProPageById`, '{_Id :"'+professionalProfileID+'"}', {
+  getAProfessionalProfileById(professionalProfileID: String) {
+    return this.http.post(`${BASE_URL}/professionalProfile/getAProPageById`, '{_Id :"' + professionalProfileID + '"}', {
       headers: HEADER
     })
       .toPromise()
@@ -48,13 +48,13 @@ export class ProfessionalProfileService {
   //   });
 
 
-    // updateUser(user: User) {
-    //   return this.http.put(`${BASE_URL}/accounts/update`, JSON.stringify(user), {
-    //     headers: HEADER
-    //   })
-    //     .toPromise()
-    //     .catch(err => console.log(err.message));
-    // }
+  // updateUser(user: User) {
+  //   return this.http.put(`${BASE_URL}/accounts/update`, JSON.stringify(user), {
+  //     headers: HEADER
+  //   })
+  //     .toPromise()
+  //     .catch(err => console.log(err.message));
+  // }
 
 
-  }
+}
