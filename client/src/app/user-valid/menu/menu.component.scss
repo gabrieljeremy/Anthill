@@ -1,27 +1,55 @@
+@import "../../../_scss/_variables.scss";
+
 nav {
-  background:#f36b56;
+  background:$primary-color;
   color:white;
-  padding:0.5rem 0;
-  .logo {
-    font-size:3rem;
+  padding:0 20px;
+  height:80px;
+  line-height:80px;
+  h1 {
+    margin:0;
     float:left;
+    font-size:2rem;
+  }
+  img {
+    width:80px;
+    float:left;
+    margin-right:10px;
+    margin-top:17px;
   }
   .menu {
     float:right;
-    padding-top:0.7rem;
-    .material-icons {
-      font-size: 2rem;
-      margin-right:1rem;
-      &:last-child {
-        margin:0;
-      }
+    .mat-icon {
+      font-size:2rem;
     }
     .notifs {
       background:white;
       border-radius:50%;
       padding:0.5rem;
-      color:#f36b56;
+      color:$primary-color;
       position:absolute;
+    }
+    &-user {
+      float:right;
+      width:200px;
+      margin-left:20px;
+      height:80px;
+      background: darken($primary-color, 2%);
+      font-size:1rem;
+      .mat-icon-button {
+        padding: 0 20px;
+        width:200px;
+        height:85px;
+        font-size:1.2rem;
+      }
+      img {
+        width:50px;
+        margin-right:10px;
+        margin-top:-5px;
+      }
+      .mat-icon {
+        margin-right:10px;
+      }
     }
   }
   &:after {

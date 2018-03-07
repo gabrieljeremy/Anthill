@@ -1,14 +1,30 @@
 <nav>
-  <div class="container">
-      <span class="logo">Anthill</span>
-      <div class="menu">
-        <mat-icon>note_add</mat-icon>
-        <mat-icon>notifications</mat-icon>
-        <!-- <span class="notifs">4</span> -->
-      </div>
-      <div class="nav-account">
-
-      </div>
-
+  <img src="../assets/img/logowhite.png" alt="logo"><h1>Anthill</h1>
+  <div class="menu">
+    <button mat-icon-button [matMenuTriggerFor]="requestMenu">
+      <mat-icon>notifications</mat-icon>
+    </button>
+    <button mat-icon-button [matMenuTriggerFor]="notifsMenu">
+      <mat-icon>note_add</mat-icon>
+    </button>
+    <div class="menu-user">
+        <button mat-icon-button [matMenuTriggerFor]="userMenu">
+          <img src="../assets/img/avatar.png"/>
+          Jérémy <mat-icon>arrow_drop_down_circle</mat-icon>
+        </button>
+      <mat-menu #userMenu="matMenu" yPosition="below" [overlapTrigger]="false">
+          <button mat-menu-item>Settings</button>
+          <button mat-menu-item>Help</button>
+        </mat-menu>
+    </div>
+    <mat-menu #requestMenu="matMenu" yPosition="below" [overlapTrigger]="false">
+      <button mat-menu-item>Settings</button>
+      <button mat-menu-item>Help</button>
+    </mat-menu>
+    <mat-menu #notifsMenu="matMenu" yPosition="below" [overlapTrigger]="false">
+      <button mat-menu-item>Settings</button>
+      <button mat-menu-item>Help</button>
+    </mat-menu>
+    <!-- <span class="notifs">4</span> -->
   </div>
 </nav>

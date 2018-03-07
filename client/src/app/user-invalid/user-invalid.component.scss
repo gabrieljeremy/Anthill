@@ -1,10 +1,52 @@
+@import "../../_scss/_variables.scss";
+
 .titleApp{
-  z-index: 1;
   color: white;
-position: absolute;
-width: 100%;
-top: 0;
-left: 0;
-text-align: center;
-border-bottom: 1px dotted rgba(255,255,255,0.3);
+  width: 100%;
+  text-align: left;
+  height:70px;
+  position:absolute;
+  top:0;
+  padding:20px;
+  h1 {
+    margin:0;
+    float:left;
+  }
+  img {
+    width:80px;
+    float:left;
+    margin-right:10px;
+  }
+}
+.user-actions {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+}
+app-login {
+  background: $primary-color;
+  padding-top: 100px;
+  text-align:center;
+  display:flex;
+  height: 100vh;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items:center;
+  // box-shadow: $shadow-lvl2;
+}
+
+app-register {
+  background:$secondary-color;
+  height: 100vh;
+  padding-top: 100px;
+  // box-shadow: $shadow-lvl2;
+  // transition: 0.3s ease-in-out;
+  text-align:center;
+  display:flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items:center;
+  // &:hover {
+  //   width: 52%;
+  //   transition: 0.3s ease-in-out;
+  // }
 }
