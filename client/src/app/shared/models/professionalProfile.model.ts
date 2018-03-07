@@ -1,4 +1,5 @@
 export interface ProfessionalProfile {
+    
     editors: [{User}],
     creationDate: {
         type: Date,
@@ -66,6 +67,7 @@ export interface ProfessionalProfile {
         required: true,
         default: 'active'
     }
+
 }
   
   

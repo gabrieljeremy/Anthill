@@ -10,7 +10,7 @@ export interface User {
     country: String,
     geoLoc: {
       type: [Number],  // [<longitude>, <latitude>]
-      index: '2d',      // create the geospatial index
+      
       required: false
     }
   };

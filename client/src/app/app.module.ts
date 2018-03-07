@@ -3,6 +3,7 @@ import { NgModule, HostBinding } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 
+
 // Material ANGULAR
 import { MatButtonModule, MatCheckboxModule, MatIconModule, MatMenuModule, MatOptionModule,MatToolbarModule } from '@angular/material';
 import { FormControl, Validators, ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -55,6 +56,7 @@ const routes: Routes = [
     AsideMenuComponent,
     MyRequestsComponent,
     NewProfessionalProfileComponent
+    
 
   ],
   imports: [
@@ -75,6 +77,8 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatTableModule,
     MatToolbarModule
+   
+    
   ],
   exports: [RouterModule],
   providers: [UserService,ProfessionalProfileService],
