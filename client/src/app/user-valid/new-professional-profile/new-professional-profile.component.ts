@@ -20,6 +20,7 @@ export class NewProfessionalProfileComponent implements OnInit {
   constructor(private router: Router,fb: FormBuilder, public professionalProfileService :ProfessionalProfileService) {
     this.loggedUser = JSON.parse(sessionStorage.getItem('user'));
     this.proForm = new FormGroup({});    
+    
     this.proForm = fb.group({
       companyName: ['ABC', Validators.required],
       vat: ['', Validators.required],
@@ -57,8 +58,8 @@ export class NewProfessionalProfileComponent implements OnInit {
   async onSubmit(valuesFromForm) {
     console.log(valuesFromForm);      
       let newProfessionalProfile={
-        editors: null,
-      creationDate: null,
+        editors: [this.loggedUser],
+      creationDate: Date.now(),
       companyName: valuesFromForm['companyName'],
       contactFirstName: valuesFromForm['contactFirstName'],
       contactLastName:  valuesFromForm['contactLastName'],
@@ -80,7 +81,7 @@ export class NewProfessionalProfileComponent implements OnInit {
       pictures: ['pic1'],
       status:  'active'
       };
-      newProfessionalProfile.editors.push(this.loggedUser)
+      
 
       console.log('ok Onregister');
       const response = await this.professionalProfileService.create(newProfessionalProfile);

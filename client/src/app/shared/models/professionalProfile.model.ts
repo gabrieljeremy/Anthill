@@ -1,9 +1,12 @@
+import { User } from '../../shared/models/user.model';
+
 export interface ProfessionalProfile {
     
-    editors: [{User}],
+    editors: User[],
     creationDate: {
-        type: Date,
-        required: true        
+        type: any,
+        required: true,
+            
     },
     companyName: {
         type: String,
@@ -60,7 +63,7 @@ export interface ProfessionalProfile {
         required : true
     },
     pictures: {
-        type: [String]
+        type: String[]
     },
     status: {
         type: String,
