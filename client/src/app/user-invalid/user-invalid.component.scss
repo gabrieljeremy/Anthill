@@ -20,31 +20,31 @@
 }
 .user-actions {
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;//ce qui fait un bloc orange et et un bleu
 }
 app-login {
   background: $primary-color;
-  padding-top: 100px;
+  padding-top: 50px;
   text-align:center;
-  display:flex;
+  display:grid;
   height: 100vh;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items:center;
+  //flex-flow: column wrap;
+  //justify-content: flex-start;
+  //align-items:center;
   // box-shadow: $shadow-lvl2;
 }
 
 app-register {
   background:$secondary-color;
   height: 100vh;
-  padding-top: 100px;
+  padding-top: 50px;
   // box-shadow: $shadow-lvl2;
   // transition: 0.3s ease-in-out;
   text-align:center;
-  display:flex;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items:center;
+  display:grid;
+  //flex-flow: column wrap;
+  //justify-content: flex-start;
+  //align-items:center;
   // &:hover {
   //   width: 52%;
   //   transition: 0.3s ease-in-out;
