@@ -36,6 +36,12 @@ nav {
       height:80px;
       background: darken($primary-color, 2%);
       font-size:1rem;
+      .option{
+        background: none;
+        box-shadow: none;
+        width:200px;
+        height:70px;
+      }
       .mat-icon-button {
         padding: 0 20px;
         width:200px;
