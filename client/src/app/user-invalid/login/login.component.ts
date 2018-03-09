@@ -36,13 +36,8 @@ export class LoginComponent implements OnInit {
           form.fadeIn(500);
           dialog.removeClass('isHidden');
         });
-<<<<<<< HEAD
       }else{
         form.fadeOut(1000, function(){
-=======
-      } else {
-        form.fadeOut(1000, function() {
->>>>>>> d9cd10a5195727db1015aaf879ace4c0996bd930
           dialog.fadeOut(100);
           dialog.addClass('isHidden');
         });
