@@ -30,8 +30,14 @@ export class LoginComponent implements OnInit {
       e.preventDefault();
       $('.dialogReset').toggleClass('hiddenForm');
     });
+    
+    $('.closeReset').click(function (e) {
+      e.preventDefault();
+      $('.dialogReset').addClass('hiddenForm');
+    });
 
   }
+  
 
   async onSubmit(user)  {
     const response = await this.userService.login(user as User);

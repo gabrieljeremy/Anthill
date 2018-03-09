@@ -8,6 +8,8 @@ h2 {
 }
 
 .loginForm {
+  justify-self: center;
+  align-self: center;
   width: 500px;
   background: whitesmoke;
   box-shadow: $shadow-lvl2;
@@ -64,13 +66,16 @@ h2 {
     height: 200px;
     text-align: center;
     text-transform: capitalize;
+    button{
+      background: $primary-color;
+      color: white;
+    }
     .example-full-width {
       width: 100%;
       margin: auto;
     }
     .mat-icon {
-      position: absolute;
-      left: -25px;
+      color: white;
     }
   }
 }

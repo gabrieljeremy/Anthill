@@ -3,6 +3,7 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway');
 @import "./_scss/_variables.scss";
+
 html,
 *,
 body {
@@ -65,13 +66,13 @@ app-dashboard {
 
   }
 }
-@media screen and (max-width: 800px) {
-  app-register {
-    position: relative;
-    width: 100%;
-  }
-  app-login {
-    position: relative;
-    width: 100%;
-  }
-}
+// @media screen and (max-width: 800px) {
+//   app-register {
+//     position: relative;
+//     width: 100%;
+//   }
+//   app-login {
+//     position: relative;
+//     width: 100%;
+//   }
+// }
