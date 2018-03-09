@@ -4,25 +4,31 @@ h2 {
   color:white;
   font-size:2.5rem;
   text-align: center;
+  align-self:center;
 }
 
 .registerForm {
   background: whitesmoke;
   width: 500px;
-  padding: 50px;
+  padding:30px 80px;
   box-shadow: $shadow-lvl2;
+  justify-self:center;
+  align-self: center;
   .example-full-width {
     width: 100%;
     margin: auto;
   }
   .example-full-width .mat-icon {
     position: absolute;
-    left: -25px;
+    left: -40px;
   }
   .close {
     border: none;
     float: right;
     cursor: pointer;
+  }
+  .mat-form-field {
+    margin-bottom:10px;
   }
 }
 
@@ -31,8 +37,8 @@ h2 {
   padding:20px 50px;
   font-size: 2rem;
   font-weight: bold;
-  transform: translate(0, -50%);
-  margin: 30% 35%;
+  align-self:center;
+  justify-self:center;
 }
 
 .dialog {

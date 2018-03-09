@@ -24,27 +24,21 @@
 }
 app-login {
   background: $primary-color;
-  padding-top: 100px;
   text-align:center;
-  display:flex;
   height: 100vh;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items:center;
+  display:grid;
+  grid-template-rows: 2fr 5fr;
   // box-shadow: $shadow-lvl2;
 }
 
 app-register {
   background:$secondary-color;
   height: 100vh;
-  padding-top: 100px;
+  display:grid;
   // box-shadow: $shadow-lvl2;
   // transition: 0.3s ease-in-out;
   text-align:center;
-  display:flex;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items:center;
+  grid-template-rows: 2fr 5fr;
   // &:hover {
   //   width: 52%;
   //   transition: 0.3s ease-in-out;
