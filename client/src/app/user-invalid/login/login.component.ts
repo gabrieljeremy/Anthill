@@ -25,16 +25,34 @@ export class LoginComponent implements OnInit {
       email: new FormControl(),
       password: new FormControl(),
     });
-
+    let dialog= $('.dialogReset');
+    const form= $('.box_dialog');
+    dialog.hide();
+    form.hide();
     $('.forgotPassword').click(function (e) {
       e.preventDefault();
-      $('.dialogReset').toggleClass('hiddenForm');
+      if (dialog.hasClass('isHidden')){
+        dialog.fadeIn(100, function(){
+          form.fadeIn(500);
+          dialog.removeClass('isHidden');
+        })
+      }else{
+        form.fadeOut(1000, function(){
+          dialog.fadeOut(100);
+          dialog.addClass('isHidden');
+        });
+      }
+
     });
     
     $('.closeReset').click(function (e) {
       e.preventDefault();
-      $('.dialogReset').addClass('hiddenForm');
+      form.fadeOut(500, function(){
+        dialog.fadeOut(100);
+        dialog.addClass('isHidden');
+      });
     });
+    
 
   }
   

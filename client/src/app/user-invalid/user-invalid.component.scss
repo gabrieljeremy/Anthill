@@ -24,42 +24,21 @@
 }
 app-login {
   background: $primary-color;
-<<<<<<< HEAD
   text-align:center;
   height: 100vh;
   display:grid;
   grid-template-rows: 2fr 5fr;
-=======
-  padding-top: 50px;
-  text-align:center;
-  display:grid;
-  height: 100vh;
-  //flex-flow: column wrap;
-  //justify-content: flex-start;
-  //align-items:center;
->>>>>>> e65233be3311da6bafacbc946e33714ca46a8ea8
   // box-shadow: $shadow-lvl2;
 }
 
 app-register {
   background:$secondary-color;
   height: 100vh;
-<<<<<<< HEAD
   display:grid;
   // box-shadow: $shadow-lvl2;
   // transition: 0.3s ease-in-out;
   text-align:center;
   grid-template-rows: 2fr 5fr;
-=======
-  padding-top: 50px;
-  // box-shadow: $shadow-lvl2;
-  // transition: 0.3s ease-in-out;
-  text-align:center;
-  display:grid;
-  //flex-flow: column wrap;
-  //justify-content: flex-start;
-  //align-items:center;
->>>>>>> e65233be3311da6bafacbc946e33714ca46a8ea8
   // &:hover {
   //   width: 52%;
   //   transition: 0.3s ease-in-out;
