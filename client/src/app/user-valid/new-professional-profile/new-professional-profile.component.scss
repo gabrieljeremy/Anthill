@@ -1,44 +1,32 @@
-.registerForm {
-    background: whitesmoke;
-    width: 500px;
-    margin: 30% 50%;
-    padding: 50px;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    .example-full-width {
-      width: 100%;
-      margin: auto;
-    }
-    .example-full-width .mat-icon {
-      position: absolute;
-      left: -25px;
-    }
-    .close {
-      border: none;
-      float: right;
-      cursor: pointer;
-    }
-}
-.formBlock{
-    width: 75%;
+@import "../../../_scss/_variables.scss";
+
+.proForm{
     margin: 0 auto;
-}
-.picList{
-    width: 75%;
-    margin: 0 auto;
-}
-.addPicture{
-    border: 1px black dotted;
-    width: 20%;
-    height: 150px;
-    display: inline-block;
-    margin-right: 15px;
-    transition: all 0.3s;
-    background: url('/assets/pics/add.png') no-repeat center;;
-    background-size: auto 60px;
-    border-radius: 3px;
-    cursor: pointer;
-    &:hover{
-        background-color: rgba(0, 0, 0,0.05);
+    width:75%;
+    button{
+        background: $primary-color;
+        color:white;
+        float:right;
+        margin-bottom:30px;
+    }
+    .example-full-width{
+        width:30%;
+        margin-right: 30px;
+        
+    }
+    .addPicture{
+        border: 1px black dotted;
+        width: 20%;
+        height: 150px;
+        display: inline-block;
+        margin-right: 15px;
+        transition: all 0.3s;
+        background: url('/assets/pics/add.png') no-repeat center;;
+        background-size: auto 60px;
+        border-radius: 3px;
+        cursor: pointer;
+        &:hover{
+            background-color: rgba(0, 0, 0,0.05);
+        }
     }
 }

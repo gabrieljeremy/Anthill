@@ -10,7 +10,7 @@
     <div class="menu-user">
         <button class="option" mat-raised-button [matMenuTriggerFor]="userMenu">
           <img src="../assets/img/avatar.png"/>
-          Jérémy <mat-icon>arrow_drop_down_circle</mat-icon>
+          {{loggedUser.firstName}} <mat-icon>arrow_drop_down_circle</mat-icon>
         </button>
       <mat-menu #userMenu="matMenu" yPosition="below" [overlapTrigger]="false">
           <button mat-menu-item>Settings</button>

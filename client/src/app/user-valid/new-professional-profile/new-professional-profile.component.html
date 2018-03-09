@@ -20,7 +20,7 @@
         <input matInput type="text" class="form-control" formControlName="activityZone" placeholder="Activity Zone (km)" required>
       </mat-form-field>
       <mat-form-field class="example-full-width">
-        <input matInput type="text" class="form-control" formControlName="webSite" placeholder="Web Site" required>
+        <input matInput type="text" class="form-control" formControlName="webSite" placeholder="Web Site" >
       </mat-form-field>
     </div>
     <div class="formBlock">
@@ -75,7 +75,7 @@
       <div class="addPicture" (click)="addPicture()"></div>
 
     </div>
-    <button mat-raised-button color="primary" type="submit" class="btn button btn-success">Validate</button>
+    <button mat-raised-button type="submit" class="btn button btn-success">Validate</button>
 
     <mat-error *ngIf="msg"> {{msg}} </mat-error>
 
