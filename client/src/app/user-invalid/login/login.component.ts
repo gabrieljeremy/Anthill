@@ -25,26 +25,25 @@ export class LoginComponent implements OnInit {
       email: new FormControl(),
       password: new FormControl(),
     });
-    let dialog= $('.dialogReset');
-    const form= $('.box_dialog');
+    const dialog = $('.dialogReset');
+    const form = $('.box_dialog');
     dialog.hide();
     form.hide();
     $('.forgotPassword').click(function (e) {
       e.preventDefault();
-      if (dialog.hasClass('isHidden')){
-        dialog.fadeIn(100, function(){
+      if (dialog.hasClass('isHidden')) {
+        dialog.fadeIn(100, function() {
           form.fadeIn(500);
           dialog.removeClass('isHidden');
-        })
-      }else{
-        form.fadeOut(1000, function(){
+        });
+      } else {
+        form.fadeOut(1000, function() {
           dialog.fadeOut(100);
           dialog.addClass('isHidden');
         });
       }
 
     });
-    
     $('.closeReset').click(function (e) {
       e.preventDefault();
       form.fadeOut(500, function(){
@@ -52,10 +51,10 @@ export class LoginComponent implements OnInit {
         dialog.addClass('isHidden');
       });
     });
-    
+
 
   }
-  
+
 
   async onSubmit(user)  {
     const response = await this.userService.login(user as User);
